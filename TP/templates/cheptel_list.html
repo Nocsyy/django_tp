@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Ma Page d'Accueil{% endblock %}</title>
+    <!-- Inclure ici les liens CSS, les balises META, etc. -->
+</head>
+
+<body>
+    <header>
+        <!-- En-tête de la page -->
+    </header>
+
+    <nav>
+        <!-- Barre de navigation -->
+    </nav>
+
+    <main>
+        {% block content %}
+        <h1>Bienvenue sur la Page d'Accueil</h1>
+
+        <section>
+            {% for user in object_list %}
+            <h2>Bienvenue {{user.prenom}}</h2>
+            {% endfor %}
+
+            <h2>Liste des Cheptels</h2>
+            {% for cheptel in object_list %}
+            <article>
+                <h3>Cheptel: {{ cheptel.nom }}</h3>
+
+                <h4>Ruches dans ce Cheptel</h4>
+                <ul>
+                    {% for ruche in cheptel.ruche_set.all %}
+                    <li>Ruche: {{ ruche.nom }} - État: {{ ruche.statut }} - Année de la reine: {{ruche.annee_reine}} ans
+                        {% empty %}
+                        <p>Aucune ruche trouvée pour ce cheptel.</p>
+                    </li>
+                    <!-- Exemple d'affichage d'informations sur la ruche -->
+                    {% endfor %}
+                </ul>
+
+                <h4>Interventions pour ce Cheptel</h4>
+                <ul>
+                    {% for intervention in cheptel.intervention_set.all %}
+                    <li>Intervention: {{ intervention.type }} - Date: {{ intervention.date }}</li>
+                    <!-- Autres détails de l'intervention -->
+                    {% endfor %}
+                </ul>
+
+                <h4>Contaminations associées à ce Cheptel: {{ cheptel.contamination_set.count }} </h4>
+                <ul>
+                    <li>Contamination: {{ contamination.type }} - Niveau: {{ contamination.niveau }}</li>
+                    <!-- Autres détails de la contamination -->
+                    {% endfor %}
+                </ul>
+
+                <!-- Ajoutez des sections similaires pour d'autres données liées aux cheptels -->
+            </article>
+            {% empty %}
+            <p>Aucun cheptel trouvé.</p>
+            {% endfor %}
+        </section>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Pied de page -->
+    </footer>
+
+    <!-- Inclure ici les scripts JavaScript -->
+</body>
+
+</html>

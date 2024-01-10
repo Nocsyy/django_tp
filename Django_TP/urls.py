@@ -14,9 +14,39 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
+from django.http import HttpResponse
+from django.contrib.auth import views as auth_views
+
+from TP.views.apiculteur import ApiculteurViewSet
+from TP.views.cheptel import CheptelViewSet, CheptelListView
+from TP.views.contamination import ContaminationViewSet
+from TP.views.interventions import InterventionViewSet
+from TP.views.recolte import RecolteViewSet
+from TP.views.ruche import RucheViewSet 
+from TP.views.user import UserViewSet
+
+from TP.views.cheptel import CheptelListView
+
+router = routers.DefaultRouter()
+router.register(r'apiculteurs', ApiculteurViewSet)
+router.register(r'cheptel', CheptelViewSet)
+router.register(r'contamination', ContaminationViewSet)
+router.register(r'intervention', InterventionViewSet)
+router.register(r'recolte', RecolteViewSet)
+router.register(r'ruche', RucheViewSet)
+router.register(r'user', UserViewSet)
+
+def home(request):
+    return HttpResponse("Bienvenue sur l'API Apiculteur.")
 
 urlpatterns = [
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
+    path('cheptels/', CheptelListView.as_view(), name='home_page'),
 ]

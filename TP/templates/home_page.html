@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Ma Page d'Accueil{% endblock %}</title>
+    <!-- Inclure ici les liens CSS, les balises META, etc. -->
+</head>
+
+<body>
+    <header>
+        <!-- En-tête de la page -->
+    </header>
+
+    <nav>
+        <!-- Barre de navigation -->
+    </nav>
+
+    <main>
+        {% block content %}
+
+        <h1>Bienvenue sur la page d'acceuil </h1>
+
+        <section>
+
+
+
+            <h2>Liste des Cheptels</h2>
+            {% for cheptel in object_list %}
+            <article>
+                <h3>Cheptel: {{ cheptel.nom }}</h3>
+
+                <h4>Ruches dans ce Cheptel</h4>
+
+                <ul>
+                    {% for ruche in cheptel.ruches.all %}
+                    <li>Ruche: {{ ruche.nom }} - Dernier État: {{ ruche.statut }} -Date de l'état:
+                        {{ruche.date_statut}}- Année de la reine: {{ruche.annee_reine}} ans
+                        {% empty %}
+                        <p>Aucune ruche trouvée pour ce cheptel.</p>
+                    </li>
+                    <!-- Exemple d'affichage d'informations sur la ruche -->
+                    {% endfor %}
+                </ul>
+
+                <h4>Interventions pour ce Cheptel</h4>
+                <ul>
+                    {% for ruche in cheptel.ruches.all %}
+                    {% for intervention in ruche.interventions.all %}
+                    <li>Intervention dans la ruche {{ ruche.nom }}: {{ intervention.nature }}</li>
+                    {% empty %}
+                    <li>Aucune intervention trouvée pour la{{ ruche.nom }}.</li>
+                    {% endfor %}
+                    {% empty %}
+                    <li>Aucune ruche avec intervention trouvée pour ce cheptel.</li>
+                    {% endfor %}
+                </ul>
+
+                <h4>Contaminations associées à ce Cheptel</h4>
+                <ul>
+                    {% for ruche in cheptel.ruches.all %}
+                    {% for contamination in ruche.contaminations.all %}
+                    <li> Ruche: {{ ruche.nom }} à été contaminée par {{ contamination.maladie }} - Traitée: {% if contamination.traite %}La ruche a été traitée{% else %}La
+                        ruche n'a pas été traitée{% endif %}</li>
+                    <!-- Autres détails de la contamination -->
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
+
+                <!-- Ajoutez des sections similaires pour d'autres données liées aux cheptels -->
+            </article>
+            {% empty %}
+            <p>Aucun cheptel trouvé.</p>
+            {% endfor %}
+        </section>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Pied de page -->
+    </footer>
+
+    <!-- Inclure ici les scripts JavaScript -->
+</body>
+
+</html>

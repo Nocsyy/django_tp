@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Liste des Apiculteurs</title>
+</head>
+
+<body>
+    <h1>Liste des Apiculteurs</h1>
+    <ul>
+        {% for apiculteurs in apiculteurs %}
+        <li>{{ apiculteur.nom }} {{ apiculteur.prenom }}</li>
+        {% empty %}
+        <li>Aucun apiculteur trouvé.</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
