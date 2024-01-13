@@ -12,7 +12,7 @@ L'objectif de ce projet est de créer une application dédiée à l'apiculture, 
 
 2. **API Publique :**
    - Utilisation de Django Rest Framework (DRF) pour créer une API robuste.
-   - Utilisation de Serializers, ModelViewSet et Filtres DRF pour organiser et exposer les données des ruches et des abeilles.
+   - Utilisation de Serializers, ModelViewSet et Filtres DRF pour organiser et exposer les données.
    - Les données seront rendues publiques, permettant à d'autres applications ou plateformes de les utiliser.
 
 3. **Architecture du Projet :**
@@ -20,27 +20,7 @@ L'objectif de ce projet est de créer une application dédiée à l'apiculture, 
    - Utilisation de l'environnement virtuel pour isoler les dépendances du projet.
    - Développement d'une structure propre et organisée avec des applications Django distinctes pour une gestion modulaire.
 
-4. **Backend uniquement, avec possibilité d'extension Frontend :**
-   - Bien que le focus soit sur le backend, envisagez l'extension future en développant un frontend qui pourra tirer parti de l'API publique.
 
-## Guideline pour le Développement
-
-1. **Initialisation du Projet :**
-   - Création d'un environnement virtuel.
-   - Initialisation du projet Django et configuration de Git.
-
-2. **Mise en Place du Projet et des Apps :**
-   - Création des applications Django nécessaires pour la gestion des ruches.
-
-3. **V1 Simplifiée des Modèles :**
-   - Définition des modèles de base pour les ruches et les abeilles.
-
-4. **Briques Logicielles Indispensables :**
-   - Mise en place des API avec DRF.
-   - Implémentation de l'authentification et des mesures de sécurité nécessaires.
-
-5. **Développement Progressif :**
-   - Ajout progressif des fonctionnalités manquantes en respectant une approche incrémentale.
 
 Ce projet vise à fournir une solution complète et extensible pour les apiculteurs tout en respectant les bonnes pratiques de développement Django et en anticipant une évolution vers un frontend dans le futur.
 
@@ -95,7 +75,7 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
    1:
    
       python manage.py importDataUser
-   2: 
+   2: A l'ajout d'apiculteur il peut y avoir une erreur, normalement les données apiculteur seront quand importées dans la base
    
     python manage.py importDataApiculteur
    3: 
@@ -133,7 +113,6 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
 - [TP Apiculteur Andy](#tp-apiculteur-andy)
 - [Description](#description)
   - [Fonctionnalités Principales](#fonctionnalités-principales)
-  - [Guideline pour le Développement](#guideline-pour-le-développement)
 - [Installation](#installation)
   - [1. Cloner le Projet](#1-cloner-le-projet)
   - [2. Environnement Virtuel](#2-environnement-virtuel)
