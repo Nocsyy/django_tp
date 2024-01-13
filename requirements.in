@@ -6,6 +6,7 @@ django-filter
 markdown
 django-debug-toolbar
 
+
 # Security
 django-axes
 django-admin-honeypot-updated-2021
