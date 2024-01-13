@@ -4,6 +4,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, serializers, permissions
 from ..serializers import ContaminationSerializer
 from ..models import Contamination
+from ..pagination import MyCustomPaginationClass
 
 class ContaminationListView(ListView): 
     model = Contamination
@@ -26,4 +27,5 @@ class ContaminationViewSet(viewsets.ModelViewSet):
     serializer_class = ContaminationSerializer
     filterset_class = ContaminationFilter
     filter_backends = [DjangoFilterBackend]
+    pagination_class = MyCustomPaginationClass 
     permission_classes = [permissions.IsAuthenticated]

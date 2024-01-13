@@ -6,7 +6,7 @@ from django.shortcuts import render
 
 from ..models import Apiculteur 
 from ..serializers import ApiculteurSerializer
-
+from ..pagination import MyCustomPaginationClass
 import logging
 
 #logger = logging.getLogger(__name__)
@@ -29,6 +29,7 @@ class ApiculteurViewSet(viewsets.ModelViewSet):
     serializer_class = ApiculteurSerializer
     filterset_class = ApiculteurFilter
     filter_backends = [DjangoFilterBackend]
+    pagination_class = MyCustomPaginationClass 
     permission_classes = [permissions.IsAuthenticated]
 
 

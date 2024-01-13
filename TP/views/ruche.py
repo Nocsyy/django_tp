@@ -5,7 +5,7 @@ from rest_framework import viewsets, serializers, permissions
 from django_filters import rest_framework as filters
 from ..serializers import RucheSerializer
 from ..models import Ruche
-
+from ..pagination import MyCustomPaginationClass
 
 class RucheListView(ListView):
     model = Ruche
@@ -29,6 +29,7 @@ class RucheViewSet(viewsets.ModelViewSet):
     serializer_class= RucheSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = RucheFilter
+    pagination_class = MyCustomPaginationClass 
     permission_classes = [permissions.IsAuthenticated]
 
     

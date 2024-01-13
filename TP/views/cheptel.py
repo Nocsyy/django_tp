@@ -13,15 +13,7 @@ from ..pagination import MyCustomPaginationClass
 class CheptelListView(ListView):
     model = Cheptel
     queryset = Cheptel.objects.all()
-    paginate_by = 2 
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        nom = self.request.GET.get('nom', None)
-
-        if nom:
-            queryset = queryset.filter(nom__exact=nom)
-
-        return queryset
+    
 
 class CheptelFilter(django_filters.FilterSet):
     nom = django_filters.CharFilter()
@@ -30,28 +22,13 @@ class CheptelFilter(django_filters.FilterSet):
         fields = {
             'nom': ['exact'],
         }
-class IsAuthenticatedOrReadOnly(BasePermission):
-    def has_object_permission(self, request, view, obj):
-        # Autoriser toutes les requêtes en lecture
-        if request.method in SAFE_METHODS:
-            return True
-
-        # Vérifier si l'utilisateur est associé à un apiculteur
-        user = request.user
-        if hasattr(user, 'apiculteur'):
-            # Récupérer les apiculteurs associés au cheptel
-            keepers = obj.cheptel
-            # Vérifier si l'apiculteur de l'utilisateur fait partie des apiculteurs du cheptel
-            return user.apiculteur in keepers.all()
-        
-        return False
 
 class CheptelViewSet(viewsets.ModelViewSet):
     queryset = Cheptel.objects.all()
     serializer_class= CheptelSerializer
     filterset_class = CheptelFilter
     filter_backends = [DjangoFilterBackend]
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated]
     pagination_class = MyCustomPaginationClass 
     template_name = 'home_page.html'
 

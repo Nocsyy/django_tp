@@ -84,7 +84,7 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
 ## 6. Configuration de la Base de Données
    Appliquez les migrations pour créer la base de données.
     
-      python manage.py makemigrations
+      python manage.py showmigrations
    Puis : 
    
       python manage.py migrate

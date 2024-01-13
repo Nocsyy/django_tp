@@ -4,6 +4,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, serializers, permissions
 from ..serializers import InterventionsSerializer
 from ..models import Intervention
+from ..pagination import MyCustomPaginationClass
 
 class InterventionListView(ListView):
     model = Intervention
@@ -27,4 +28,5 @@ class InterventionViewSet(viewsets.ModelViewSet):
     serializer_class= InterventionsSerializer
     filterset_class = InterventionFilter
     filter_backends = [DjangoFilterBackend]
+    pagination_class = MyCustomPaginationClass 
     permission_classes = [permissions.IsAuthenticated]

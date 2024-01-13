@@ -29,7 +29,7 @@ from TP.views.interventions import InterventionViewSet
 from TP.views.recolte import RecolteViewSet
 from TP.views.ruche import RucheViewSet 
 from TP.views.user import UserViewSet
-from TP.views.home_page_view import ApiculteurCheptelListView
+
 
 from TP.views.cheptel import CheptelListView
 
@@ -49,8 +49,6 @@ urlpatterns = [
     path('', home, name='home'),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('home/', CheptelListView.as_view()),
-    path('apiculteurs/', ApiculteurCheptelListView.as_view(), name='home_page'),
-    path('test_page/', CheptelViewSet.as_view({'get': 'list'}), name='home_page2')
+    path('home/', CheptelViewSet.as_view({'get': 'list'}), name='home_page')
     # ... (les autres URLs)
 ]
