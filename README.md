@@ -1,12 +1,10 @@
 # TP Apiculteur
 
-## Description
-
-### Description du Projet - Gestion Apicole
+# Description
 
 L'objectif de ce projet est de créer une application dédiée à l'apiculture, offrant aux apiculteurs une plateforme complète pour gérer leur cheptel de ruches tout en mettant à disposition publiquement les données relatives aux ruches et aux abeilles.
 
-### Fonctionnalités Principales
+## Fonctionnalités Principales
 
 1. **Gestion du Cheptel de Ruches :**
    - Utilisation de vues et templates avec Jinja2 pour permettre aux apiculteurs de naviguer au sein de leur cheptel de ruches.
@@ -25,7 +23,7 @@ L'objectif de ce projet est de créer une application dédiée à l'apiculture, 
 4. **Backend uniquement, avec possibilité d'extension Frontend :**
    - Bien que le focus soit sur le backend, envisagez l'extension future en développant un frontend qui pourra tirer parti de l'API publique.
 
-### Guideline pour le Développement
+## Guideline pour le Développement
 
 1. **Initialisation du Projet :**
    - Création d'un environnement virtuel.
@@ -46,9 +44,9 @@ L'objectif de ce projet est de créer une application dédiée à l'apiculture, 
 
 Ce projet vise à fournir une solution complète et extensible pour les apiculteurs tout en respectant les bonnes pratiques de développement Django et en anticipant une évolution vers un frontend dans le futur.
 
-## Installation
+# Installation
 
-### 1. Cloner le Projet
+## 1. Cloner le Projet
 
     Clonez le projet depuis GitHub sur votre machine locale.
 
@@ -56,7 +54,7 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
     git clone https://github.com/Nocsyy/django_tp.git
     cd Django_TP
     ```
-### 2. Environnement Virtuel
+## 2. Environnement Virtuel
 
     Créez un environnement virtuel pour isoler les dépendances du projet.
 
@@ -74,19 +72,19 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
     source venv/bin/activate
     ```
 
-### 3. Installation des Dépendances
+## 3. Installation des Dépendances
     Installez les dépendances du projet.
     ```bash
     pip install -r requirements.txt
     ```
 
-### 4. Configuration de la Base de Données
+## 4. Configuration de la Base de Données
     Appliquez les migrations pour créer la base de données.
     ```bash
     python manage.py makemigrations
     python manage.py migrate
     ```
-### 5. Import des données 
+## 5. Import des données 
     Télécharger le dossier contenant les csv, puis placer le dans dossier management 
     Ensuite, dans l'ordre importer les données avec les commandes suivantes : 
     ```bash
@@ -111,33 +109,34 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
     python manage.py importDataRecolte
     ``` 
 
-### 5. Création d'un Superutilisateur
+## 6. Création d'un Superutilisateur
 
     Créez un superutilisateur pour accéder à l'interface d'administration Django.
      ```bash
      python manage.py createsuperuser
      ```
-### 6. Lancement du serveur 
+## 7. Lancement du serveur 
     Lancez le serveur de développement.
+
     ```bash
     python manage.py runserver
     ```
-## Table des Matières
+
+# Table des Matières
 
 - [TP Apiculteur](#tp-apiculteur)
-  - [Description](#description)
-    - [Description du Projet - Gestion Apicole](#description-du-projet---gestion-apicole)
-    - [Fonctionnalités Principales](#fonctionnalités-principales)
-    - [Guideline pour le Développement](#guideline-pour-le-développement)
-  - [Installation](#installation)
-    - [1. Cloner le Projet](#1-cloner-le-projet)
-    - [2. Environnement Virtuel](#2-environnement-virtuel)
-    - [3. Installation des Dépendances](#3-installation-des-dépendances)
-    - [4. Configuration de la Base de Données](#4-configuration-de-la-base-de-données)
-    - [5. Import des données](#5-import-des-données)
-    - [5. Création d'un Superutilisateur](#5-création-dun-superutilisateur)
-    - [6. Lancement du serveur](#6-lancement-du-serveur)
-  - [Table des Matières](#table-des-matières)
+- [Description](#description)
+  - [Fonctionnalités Principales](#fonctionnalités-principales)
+  - [Guideline pour le Développement](#guideline-pour-le-développement)
+- [Installation](#installation)
+  - [1. Cloner le Projet](#1-cloner-le-projet)
+  - [2. Environnement Virtuel](#2-environnement-virtuel)
+  - [3. Installation des Dépendances](#3-installation-des-dépendances)
+  - [4. Configuration de la Base de Données](#4-configuration-de-la-base-de-données)
+  - [5. Import des données](#5-import-des-données)
+  - [6. Création d'un Superutilisateur](#6-création-dun-superutilisateur)
+  - [7. Lancement du serveur](#7-lancement-du-serveur)
+- [Table des Matières](#table-des-matières)
 
 
 
