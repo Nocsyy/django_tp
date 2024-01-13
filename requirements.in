@@ -5,7 +5,8 @@ djangorestframework
 django-filter
 markdown
 django-debug-toolbar
-
+tdqm
+pandas
 
 # Security
 django-axes
