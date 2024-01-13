@@ -51,8 +51,8 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
    **Clonez le projet depuis GitHub sur votre machine locale.**
 
     
-    git clone https://github.com/Nocsyy/django_tp.git
-    cd Django_TP
+       git clone https://github.com/Nocsyy/django_tp.git
+   
     
 ## 2. Environnement Virtuel
 
@@ -71,14 +71,17 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
     
     source venv/bin/activate
    
-
-## 3. Installation des Dépendances
+## 4. Installation des Dépendances
+   Connectez vous a votre base de donnée n'oubliez pas de créer un .env a la racine du projet en suivant le fichier env-templates
+    
+    
+## 5. Installation des Dépendances
    Installez les dépendances du projet.
     
     pip install -r requirements.txt
    
 
-## 4. Configuration de la Base de Données
+## 6. Configuration de la Base de Données
    Appliquez les migrations pour créer la base de données.
     
       python manage.py makemigrations
@@ -86,7 +89,7 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
    
       python manage.py migrate
    
-## 5. Import des données 
+## 7. Import des données 
    Télécharger le dossier contenant les csv, puis placer le dans dossier management 
    Ensuite, dans l'ordre importer les données avec les commandes suivantes : 
    1:
@@ -112,13 +115,13 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
     python manage.py importDataRecolte
     
 
-## 6. Création d'un Superutilisateur
+## 8. Création d'un Superutilisateur
 
    Créez un superutilisateur pour accéder à l'interface d'administration Django.
 
      python manage.py createsuperuser
 
-## 7. Lancement du serveur 
+## 9. Lancement du serveur 
    Lancez le serveur de développement.
 
 
@@ -134,11 +137,12 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
 - [Installation](#installation)
   - [1. Cloner le Projet](#1-cloner-le-projet)
   - [2. Environnement Virtuel](#2-environnement-virtuel)
-  - [3. Installation des Dépendances](#3-installation-des-dépendances)
-  - [4. Configuration de la Base de Données](#4-configuration-de-la-base-de-données)
-  - [5. Import des données](#5-import-des-données)
-  - [6. Création d'un Superutilisateur](#6-création-dun-superutilisateur)
-  - [7. Lancement du serveur](#7-lancement-du-serveur)
+  - [4. Installation des Dépendances](#4-installation-des-dépendances)
+  - [5. Installation des Dépendances](#5-installation-des-dépendances)
+  - [6. Configuration de la Base de Données](#6-configuration-de-la-base-de-données)
+  - [7. Import des données](#7-import-des-données)
+  - [8. Création d'un Superutilisateur](#8-création-dun-superutilisateur)
+  - [9. Lancement du serveur](#9-lancement-du-serveur)
 - [Table des Matières](#table-des-matières)
 
 
