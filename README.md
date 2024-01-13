@@ -53,7 +53,7 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
     ```bash
     git clone https://github.com/Nocsyy/django_tp.git
     cd Django_TP
-    ```
+    
 ## 2. Environnement Virtuel
 
     Créez un environnement virtuel pour isoler les dépendances du projet.
