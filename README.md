@@ -60,13 +60,13 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
 
     ```cmd
     python -m venv venv
-    ```
+    
     Activez l'environnement virtuel.
 
     Sur Windows : 
     ```bash
     venv\Scripts\activate
-    ```
+    
     Sur MacOS/Linux : 
     ```bash
     source venv/bin/activate
