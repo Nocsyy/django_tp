@@ -22,6 +22,10 @@ class CheptelFilter(django_filters.FilterSet):
         fields = {
             'nom': ['exact'],
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e15d44ff810746fd0b12ba14d2bfa6a8738fd2ee
 
 class CheptelViewSet(viewsets.ModelViewSet):
     queryset = Cheptel.objects.all()
