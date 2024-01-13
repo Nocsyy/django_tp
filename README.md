@@ -150,4 +150,3 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
 
 
 
-[Expliquez comment installer votre projet de manière claire et concise. Assurez-vous d'inclure toutes les dépendances nécessaires et les étapes d'installation.]
