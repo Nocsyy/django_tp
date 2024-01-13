@@ -51,9 +51,10 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
    **Clonez le projet depuis GitHub sur votre machine locale.**
 
     
-    git clone https://github.com/Nocsyy/django_tp.git
+       git clone https://github.com/Nocsyy/django_tp.git
+   Puis :
     
-    cd Django_TP
+       cd Django_TP
     
 ## 2. Environnement Virtuel
 
