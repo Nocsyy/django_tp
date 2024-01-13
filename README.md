@@ -71,14 +71,17 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
     
     source venv/bin/activate
    
-
-## 3. Installation des Dépendances
+## 4. Installation des Dépendances
+   Connectez vous a votre base de donnée n'oubliez pas de créer un .env a la racine du projet en suivant le fichier env-templates
+    
+    
+## 5. Installation des Dépendances
    Installez les dépendances du projet.
     
     pip install -r requirements.txt
    
 
-## 4. Configuration de la Base de Données
+## 6. Configuration de la Base de Données
    Appliquez les migrations pour créer la base de données.
     
       python manage.py makemigrations
@@ -86,7 +89,7 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
    
       python manage.py migrate
    
-## 5. Import des données 
+## 7. Import des données 
    Télécharger le dossier contenant les csv, puis placer le dans dossier management 
    Ensuite, dans l'ordre importer les données avec les commandes suivantes : 
    1:
@@ -112,13 +115,13 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
     python manage.py importDataRecolte
     
 
-## 6. Création d'un Superutilisateur
+## 8. Création d'un Superutilisateur
 
    Créez un superutilisateur pour accéder à l'interface d'administration Django.
 
      python manage.py createsuperuser
 
-## 7. Lancement du serveur 
+## 9. Lancement du serveur 
    Lancez le serveur de développement.
 
 
