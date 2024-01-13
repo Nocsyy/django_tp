@@ -58,7 +58,7 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
 
     Créez un environnement virtuel pour isoler les dépendances du projet.
 
-    ```bash
+    ```cmd
     python -m venv venv
     ```
     Activez l'environnement virtuel.
