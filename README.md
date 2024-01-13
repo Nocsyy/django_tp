@@ -1,4 +1,4 @@
-# TP Apiculteur
+# TP Apiculteur Andy
 
 # Description
 
@@ -130,7 +130,7 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
 
 # Table des Matières
 
-- [TP Apiculteur](#tp-apiculteur)
+- [TP Apiculteur Andy](#tp-apiculteur-andy)
 - [Description](#description)
   - [Fonctionnalités Principales](#fonctionnalités-principales)
   - [Guideline pour le Développement](#guideline-pour-le-développement)

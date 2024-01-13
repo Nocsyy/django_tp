@@ -8,20 +8,20 @@ class Command(BaseCommand):
     help = 'Import data from CSV files'
 
     def handle(self, *args, **options):
-        # Charger le fichier CSV avec pandas
+    
         data = pd.read_csv('TP/management/csv/user.csv')
 
         data = data.fillna('1970-01-01')
 
         instances_to_create = []
 
-        # Iterer sur les lignes du dataframe et ajouter les instances à la liste
+       
         for index, row in tqdm(data.iterrows(), desc='Importation des données', total=len(data)):
-    # Vérifier si l'utilisateur existe déjà
+  
             existing_user = User.objects.filter(username=row['username']).first()
 
             if existing_user is None:
-                # L'utilisateur n'existe pas, donc on peut le créer
+               
                 mon_modele_instance = User(
                     password=row['password'],
                     last_login=pd.to_datetime(row['last_login'], errors='coerce'),
@@ -36,7 +36,7 @@ class Command(BaseCommand):
                 )
                 instances_to_create.append(mon_modele_instance)
             else:
-                # L'utilisateur existe déjà, vous pouvez choisir de mettre à jour les données existantes si nécessaire
+               
                 pass
 
         User.objects.bulk_create(instances_to_create)
