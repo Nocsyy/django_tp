@@ -49,6 +49,7 @@ urlpatterns = [
     path('', home, name='home'),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('home/', CheptelViewSet.as_view({'get': 'list'}), name='home_page')
+    path('home/', CheptelViewSet.as_view({'get': 'list'}), name='home_page'),
+    path('home_templates/', CheptelListView.as_view(), name='home_page')
     # ... (les autres URLs)
 ]

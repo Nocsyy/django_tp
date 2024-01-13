@@ -13,6 +13,8 @@ from ..pagination import MyCustomPaginationClass
 class CheptelListView(ListView):
     model = Cheptel
     queryset = Cheptel.objects.all()
+    template_name = 'home_page.html'
+    paginate_by = 2
     
 
 class CheptelFilter(django_filters.FilterSet):
@@ -30,7 +32,7 @@ class CheptelViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend]
     permission_classes = [permissions.IsAuthenticated]
     pagination_class = MyCustomPaginationClass 
-    template_name = 'home_page.html'
+    
 
     @action(detail=True, methods=['put'])
     def mettre_a_jour_statut_ruches(self, request, pk=None):

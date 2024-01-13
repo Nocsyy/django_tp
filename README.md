@@ -107,6 +107,27 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
 
     python manage.py runserver
   
+# Test 
+   ## 1. Les Urls
+      Voici les diiférentes urls : 
+
+         http://exemple:exemple/admin/
+
+         http://exemple:exemple/api/
+
+         http://exemple:exemple/home/
+
+         http://exemple:exemple/home_templates/
+
+# Decouvrez le code et Amusez vous ;)
+
+
+         
+
+
+
+
+
 
 # Table des Matières
 
@@ -122,6 +143,9 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
   - [7. Import des données](#7-import-des-données)
   - [8. Création d'un Superutilisateur](#8-création-dun-superutilisateur)
   - [9. Lancement du serveur](#9-lancement-du-serveur)
+- [Test](#test)
+  - [1. Les Urls](#1-les-urls)
+- [Decouvrez le code et Amusez vous ;)](#decouvrez-le-code-et-amusez-vous-)
 - [Table des Matières](#table-des-matières)
 
 
