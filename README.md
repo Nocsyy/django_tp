@@ -72,7 +72,7 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
     source venv/bin/activate
    
 ## 4. Installation des Dépendances
-   Connectez vous a votre base de donnée n'oubliez pas de créer un .env a la racine du projet en suivant le fichier env-templates
+   Connectez vous a votre base de donnée, n'oubliez pas de créer un .env à la racine du projet en suivant le fichier env-templates
     
     
 ## 5. Installation des Dépendances
@@ -90,8 +90,8 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
       python manage.py migrate
    
 ## 7. Import des données 
-   Télécharger le dossier contenant les csv, puis placer le dans dossier management 
-   Ensuite, dans l'ordre importer les données avec les commandes suivantes : 
+   Téléchargez le dossier contenant les csv, puis placer le dans dossier management 
+   Ensuite, dans l'ordre, importez les données avec les commandes suivantes : 
    1:
    
       python manage.py importDataUser
