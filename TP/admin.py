@@ -40,8 +40,8 @@ class RucheAdmin(admin.ModelAdmin):
     list_filter = ('statut', 'type_abeille', 'cheptel')
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('nom', 'prenom')
-    search_fields = ('nom',)
+    list_display = ('username',)
+    search_fields = ('username',)
 
 
 # Enregistrement des modèles avec leurs configurations d'administration personnalisées

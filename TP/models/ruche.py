@@ -2,21 +2,21 @@ from django.db import models
 
 class Ruche(models.Model): 
     STATUT_CHOICES = [
-        ('active', 'Active'),
-        ('en_attente', 'En attente'),
-        ('detruite', 'Détruite'),
+        ('Active', 'Active'),
+        ('En attente', 'En attente'),
+        ('Detruite', 'Détruite'),
     ]
     
     TYPE_ABEILLE_CHOICES = [
-        ('apis_mellifera', 'Apis mellifera (Abeille européenne)'),
-        ('apis_cerana', 'Apis cerana (Abeille asiatique)'),
-        ('apis_mellifera_mellifera', 'Apis Mellifera Mellifera (Abeille noire)'),
-        ('apis_mellifera_ligustica', 'Apis Mellifera Ligustica (Abeille italienne)'),
-        ('apis_mellifera_caucasica', 'Apis mellifera caucasica (Abeille caucasienne)'),
-        ('apis_mellifera_carnica', 'Apis mellifera carnica (Abeille carolienne)'),
-        ('abeille_buckfast', 'L\'abeille Buckfast'),
-        ('abeille_charpentière_xylocope', 'L\'abeille charpentière xylocope'),
-        ('autre', 'Autre')
+        ('Apis mellifera', 'Apis mellifera (Abeille européenne)'),
+        ('Apis cerana', 'Apis cerana (Abeille asiatique)'),
+        ('Apis mellifera mellifera', 'Apis Mellifera Mellifera (Abeille noire)'),
+        ('Apis mellifera ligustica', 'Apis Mellifera Ligustica (Abeille italienne)'),
+        ('Apis mellifera caucasica', 'Apis mellifera caucasica (Abeille caucasienne)'),
+        ('Apis mellifera carnica', 'Apis mellifera carnica (Abeille carolienne)'),
+        ('Abeille buckfast', 'L\'abeille Buckfast'),
+        ('Abeille charpentière xylocope', 'L\'abeille charpentière xylocope'),
+        ('Autre', 'Autre')
     ]
 
     cheptel = models.ForeignKey('Cheptel', on_delete=models.CASCADE, related_name='ruches')

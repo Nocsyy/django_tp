@@ -1,7 +1,7 @@
 import django_filters
 from django.views.generic import ListView, DetailView
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import viewsets, serializers
+from rest_framework import viewsets, serializers, permissions
 from ..serializers import ContaminationSerializer
 from ..models import Contamination
 
@@ -26,3 +26,4 @@ class ContaminationViewSet(viewsets.ModelViewSet):
     serializer_class = ContaminationSerializer
     filterset_class = ContaminationFilter
     filter_backends = [DjangoFilterBackend]
+    permission_classes = [permissions.IsAuthenticated]

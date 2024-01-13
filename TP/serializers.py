@@ -2,12 +2,14 @@ from rest_framework import serializers
 from .models import Apiculteur, Cheptel, Ruche, Contamination, Intervention, Recolte, User
 
 class ApiculteurSerializer(serializers.ModelSerializer):
+    contact = serializers.CharField()
     class Meta:
         model = Apiculteur
         fields = '__all__'
 
 
 class CheptelSerializer(serializers.ModelSerializer):
+    apiculteur = ApiculteurSerializer(read_only=True)
     class Meta:
         model = Cheptel
         fields = '__all__'
@@ -30,17 +32,15 @@ class RecolteSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class RucheSerializer(serializers.ModelSerializer):
+    cheptel = CheptelSerializer(read_only=True)
     class Meta:
         model = Ruche
         fields = '__all__'
 
-class UserSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = '__all__'
-
-
-
+        fields = ['url', 'nom', 'prenom', 'email']
 
 
 

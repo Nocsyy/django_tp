@@ -1,7 +1,7 @@
 import django_filters
 from django.views.generic import ListView, DetailView
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import viewsets, serializers
+from rest_framework import viewsets, serializers, permissions
 from ..serializers import InterventionsSerializer
 from ..models import Intervention
 
@@ -27,3 +27,4 @@ class InterventionViewSet(viewsets.ModelViewSet):
     serializer_class= InterventionsSerializer
     filterset_class = InterventionFilter
     filter_backends = [DjangoFilterBackend]
+    permission_classes = [permissions.IsAuthenticated]

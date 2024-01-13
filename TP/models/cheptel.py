@@ -1,4 +1,5 @@
 from django.db import models
+from ..models import Apiculteur
 
 class Cheptel(models.Model): 
     nom = models.CharField(max_length=100)

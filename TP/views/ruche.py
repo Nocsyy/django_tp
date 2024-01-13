@@ -1,7 +1,7 @@
 import django_filters
 from django.views.generic import ListView, DetailView
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import viewsets, serializers
+from rest_framework import viewsets, serializers, permissions
 from django_filters import rest_framework as filters
 from ..serializers import RucheSerializer
 from ..models import Ruche
@@ -29,5 +29,6 @@ class RucheViewSet(viewsets.ModelViewSet):
     serializer_class= RucheSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = RucheFilter
+    permission_classes = [permissions.IsAuthenticated]
 
     

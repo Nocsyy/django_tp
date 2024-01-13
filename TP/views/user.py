@@ -1,5 +1,5 @@
 from django.views.generic import ListView, DetailView
-from rest_framework import viewsets, serializers
+from rest_framework import viewsets, serializers, permissions
 from ..serializers import UserSerializer
 from ..models import User
 
@@ -10,3 +10,4 @@ class UserListView(ListView):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class= UserSerializer
+    permission_classes = [permissions.IsAuthenticated]

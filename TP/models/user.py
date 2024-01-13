@@ -2,9 +2,6 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser): 
-    nom = models.CharField(max_length=100)
-    prenom = models.CharField(max_length=100)
-    
     groups = models.ManyToManyField(
             'auth.Group',
             verbose_name='groups',
@@ -21,6 +18,3 @@ class User(AbstractUser):
             related_name='tp_user_permission_set',  # nom unique pour related_name
             related_query_name='tp_user_permission',
         )
-
-    def __str__(self):
-        return self.nom

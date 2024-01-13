@@ -1,4 +1,5 @@
 .env
 django
 .DS_Store
+csv
 

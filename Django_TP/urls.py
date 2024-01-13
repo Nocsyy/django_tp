@@ -22,13 +22,14 @@ from rest_framework import routers
 from django.http import HttpResponse
 from django.contrib.auth import views as auth_views
 
-from TP.views.apiculteur import ApiculteurViewSet
+from TP.views.apiculteur import ApiculteurViewSet, ApiculteurListView
 from TP.views.cheptel import CheptelViewSet, CheptelListView
 from TP.views.contamination import ContaminationViewSet
 from TP.views.interventions import InterventionViewSet
 from TP.views.recolte import RecolteViewSet
 from TP.views.ruche import RucheViewSet 
 from TP.views.user import UserViewSet
+from TP.views.home_page_view import ApiculteurCheptelListView
 
 from TP.views.cheptel import CheptelListView
 
@@ -48,5 +49,8 @@ urlpatterns = [
     path('', home, name='home'),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('cheptels/', CheptelListView.as_view(), name='home_page'),
+    path('home/', CheptelListView.as_view()),
+    path('apiculteurs/', ApiculteurCheptelListView.as_view(), name='home_page'),
+    path('test_page/', CheptelViewSet.as_view({'get': 'list'}), name='home_page2')
+    # ... (les autres URLs)
 ]
