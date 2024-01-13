@@ -48,79 +48,82 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
 
 ## 1. Cloner le Projet
 
-    Clonez le projet depuis GitHub sur votre machine locale.
+   **Clonez le projet depuis GitHub sur votre machine locale.**
 
-    ```bash
+    
     git clone https://github.com/Nocsyy/django_tp.git
     cd Django_TP
     
 ## 2. Environnement Virtuel
 
-    Créez un environnement virtuel pour isoler les dépendances du projet.
+   Créez un environnement virtuel pour isoler les dépendances du projet.
 
-    ```cmd
+    
     python -m venv venv
     
-    Activez l'environnement virtuel.
+   Activez l'environnement virtuel.
 
-    Sur Windows : 
-    ```bash
+   Sur Windows : 
+  
     venv\Scripts\activate
     
-    Sur MacOS/Linux : 
-    ```bash
+   Sur MacOS/Linux : 
+    
     source venv/bin/activate
-    ```
+   
 
 ## 3. Installation des Dépendances
-    Installez les dépendances du projet.
-    ```bash
+   Installez les dépendances du projet.
+    
     pip install -r requirements.txt
-    ```
+   
 
 ## 4. Configuration de la Base de Données
-    Appliquez les migrations pour créer la base de données.
-    ```bash
-    python manage.py makemigrations
-    python manage.py migrate
-    ```
+   Appliquez les migrations pour créer la base de données.
+    
+      python manage.py makemigrations
+   Puis : 
+   
+      python manage.py migrate
+   
 ## 5. Import des données 
-    Télécharger le dossier contenant les csv, puis placer le dans dossier management 
-    Ensuite, dans l'ordre importer les données avec les commandes suivantes : 
-    ```bash
-    python manage.py importDataUser
-    ``` 
-    ```bash
+   Télécharger le dossier contenant les csv, puis placer le dans dossier management 
+   Ensuite, dans l'ordre importer les données avec les commandes suivantes : 
+   1:
+   
+      python manage.py importDataUser
+   2: 
+   
     python manage.py importDataApiculteur
-    ``` 
-    ```bash
+   3: 
+   
     python manage.py importDataCheptel
-    ``` 
-    ```bash
+   4: 
+   
     python manage.py importDataRuche
-    ``` 
-    ```bash
+   5: 
+   
     python manage.py importDataContamination
-    ``` 
-    ```bash
+   6: 
+   
     python manage.py importDataInterventions
-    ``` 
-    ```bash
+   7:
+   
     python manage.py importDataRecolte
-    ``` 
+    
 
 ## 6. Création d'un Superutilisateur
 
-    Créez un superutilisateur pour accéder à l'interface d'administration Django.
-     ```bash
-     python manage.py createsuperuser
-     ```
-## 7. Lancement du serveur 
-    Lancez le serveur de développement.
+   Créez un superutilisateur pour accéder à l'interface d'administration Django.
 
-    ```bash
+     python manage.py createsuperuser
+
+## 7. Lancement du serveur 
+   Lancez le serveur de développement.
+
+
     python manage.py runserver
-    ```
+  
 
 # Table des Matières
 
