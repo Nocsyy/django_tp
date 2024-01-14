@@ -75,7 +75,7 @@ Ce projet vise à fournir une solution complète et extensible pour les apiculte
    1:
    
       python manage.py importDataUser
-   2: A l'ajout d'apiculteur il peut y avoir une erreur, normalement les données apiculteur seront quand importées dans la base
+   2: A l'ajout d'apiculteur il peut y avoir une erreur, normalement les données apiculteur seront quand même importées dans la base
    
     python manage.py importDataApiculteur
    3: 
